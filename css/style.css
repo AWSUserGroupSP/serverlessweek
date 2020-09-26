@@ -8,11 +8,11 @@ body {
   font-family: "amazon_ember_displayregular"; }
 
 ::-moz-selection {
-  background: #000;
+  background: #edf0f5;
   color: #fff; }
 
 ::selection {
-  background: #000;
+  background: #edf0f5;
   color: #fff; }
 
 a {
@@ -57,6 +57,15 @@ h1, h2, h3, h4, h5,
     letter-spacing: normal !important;
   }
   
+.organizer{
+  width: 100px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+
+.padding-bottom{
+  padding-bottom: 20px;
+}
 
 .bg-black {
   background: #000 !important; }
@@ -163,7 +172,7 @@ h1, h2, h3, h4, h5,
 
 .site-footer {
   padding: 4em 0;
-  background: #b22923; }
+  background: #97201A; }
   @media (min-width: 768px) {
     .site-footer {
       padding: 8em 0; } }
@@ -173,13 +182,31 @@ h1, h2, h3, h4, h5,
     color: #fff; }
   .site-footer a {
     color: #fff; }
-    .site-footer a:hover {
-      color: #98201b; }
   .site-footer ul li {
-    margin-bottom: 10px; }
+    list-style-type: none;
+    margin-left: -40px;
+  }
   .site-footer .footer-heading {
     font-size: 16px;
     color: #fff !important; }
+
+  
+.user-groups-section {
+      padding: 4em 0;
+      background: #fff; }
+      @media (min-width: 768px) {
+        .user-groups-section {
+          padding: 8em 0; } }
+      .user-groups-section .border-top {
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important; }
+      .user-groups-section h2, .user-groups-section h3, .user-groups-section h4, .user-groups-section h5 {
+        color: black; }
+      .user-groups-section a {
+        color: black; }
+      .user-groups-section .user-groups-section-heading {
+        font-size: 16px;
+        color: black !important; }
+    
 
 .bg-text-line {
   display: inline;
