@@ -199,7 +199,7 @@ jQuery(document).ready(function($) {
 	    autoplay: true,
 	    pauseOnHover: false,
 	    nav: true,
-	    navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
+	    navText: ['<span><</span>', '<span>></span>']
 	  });
 	};
 	siteCarousel();
