@@ -57,12 +57,6 @@ h1, h2, h3, h4, h5,
     letter-spacing: normal !important;
   }
   
-.organizer{
-  width: 100px;
-  border-radius: 50%;
-  filter: grayscale(100%);
-}
-
 .padding-bottom{
   padding-bottom: 20px;
 }
@@ -697,19 +691,20 @@ h1, h2, h3, h4, h5,
       .speaker .name {
         left: 0; } }
 
-.testimony {
+.organizer {
+  padding-top: 50px;
   max-width: 500px; }
-  .testimony figure {
+  .organizer figure {
     margin-bottom: 40px;
     text-align: center; }
-    .testimony figure img {
+    .organizer figure img {
       margin: 0 auto;
       max-width: 150px;
       border-radius: 50%; }
-  .testimony .author {
+  .organizer .person {
     margin-top: 50px;
     color: #fff; }
-  .testimony .text-muted {
+  .organizer .text-muted {
     color: #e9e9ea; }
 
 .form-group .form-control {
