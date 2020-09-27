@@ -238,5 +238,71 @@ jQuery(document).ready(function($) {
 
 	};
 	siteDatePicker();
+	rollClick();
 
 });
+
+const communitiesChannels = {
+	"Lambda": "https://www.meetup.com/pt-BR/AWS-GO/",
+	"LambdaName": "Goiânia",
+
+	"APIGateway": "https://www.meetup.com/pt-BR/awsusergroupsp/",
+	"APIGatewayName": "São Paulo",
+
+	"DynamoDB": "https://www.meetup.com/pt-BR/gametech/",
+	"DynamoDBName": "Game Tech Sul Brasil",
+
+	"SQS": "https://www.meetup.com/pt-BR/awsusergroupfln/",
+	"SQSName": "Florianópolis",
+
+	"SNS": "https://www.meetup.com/pt-BR/AWS-Users-Group-CE/",
+	"SNSName": "Ceará",
+
+	"CloudWatch": "http://meetu.ps/c/3cNYY/z9bC5/a/",
+	"CloudWatchName": "Campinas",
+
+	"StepFunctions": "https://www.meetup.com/pt-BR/aws-usergroup-blumenau/",
+	"StepFunctionsName": "Blumenau",
+};
+
+const entrants = ["Lambda", "APIGateway", "DynamoDB", "SQS", "SNS", "CloudWatch", "StepFunctions"]
+
+function randomName() {
+  var rand = Math.floor(Math.random() * entrants.length);
+  var name = entrants[rand];
+  $('#communities').text(name);
+}
+
+function rollClick() {
+  $('#roll').on('click', function(e) {
+    $(this).hide();
+    
+    setDeceleratingTimeout(function() { randomName() }, 10, 40);
+    
+    setTimeout(function() {
+	  var selected = $('#communities').text();
+	  
+		var selectedName = $('#communities').text() + "Name";
+		selected = "<a target=\"_blank\" href=\"" + communitiesChannels[selected] +  "\">Conheça mais e se engaje no AWS User Group " + communitiesChannels[selectedName] + "!</a>"
+		
+      $('#communities-selected').text(selected);
+      $('#communities').hide();
+      $('#communities-selected').html(selected);
+    }, 6000);
+    
+    e.preventDefault();
+  });
+}
+
+function setDeceleratingTimeout(callback, factor, times) {
+  var internalCallback = function(t, counter) {
+    return function() {
+      if (--t > 0) {
+        window.setTimeout( internalCallback, ++counter * factor );
+        callback();
+      }
+    }
+  }(times, 0);
+
+  window.setTimeout(internalCallback, factor);
+};

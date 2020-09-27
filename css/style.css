@@ -28,6 +28,49 @@ h1, h2, h3, h4, h5,
   letter-spacing: 8px;
 }
 
+.roll-wrapper {
+
+  display: block;
+
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+}
+
+#roll {
+  display: block;
+  color: white;
+  background-color: #fcb041;
+  text-decoration: none;
+  padding: 0.45em 2em;
+  border-radius: 10px;
+  font-size: 160%;
+}
+#roll:hover {
+  background-color: white;
+  color: #97201A;
+}
+#communities {
+  color: #fff;
+  font-size: 260%;
+  font-family: "bungee_layers_regularregular"; 
+  letter-spacing: 8px;
+}
+#communities-selected {
+  font-size: 260%;
+  font-family: "bungee_layers_regularregular"; 
+}
+
+#communities-selected a{
+  color: #fcb041;
+}
+
+#communities-selected a:hover{
+  color: #F99100;
+}
+
 .logo-container{
   text-align: center;
   display: block;
