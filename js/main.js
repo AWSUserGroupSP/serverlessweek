@@ -283,7 +283,7 @@ function rollClick() {
 	  var selected = $('#communities').text();
 	  
 		var selectedName = $('#communities').text() + "Name";
-		selected = "<a target=\"_blank\" href=\"" + communitiesChannels[selected] +  "\">Conheça mais e se engaje no AWS User Group " + communitiesChannels[selectedName] + "!</a>"
+		selected = "<a target=\"_blank\" href=\"" + communitiesChannels[selected] +  "\">Clique aqui para conhecer e se engajar no AWS User Group " + communitiesChannels[selectedName] + "!</a>"
 		
       $('#communities-selected').text(selected);
       $('#communities').hide();
